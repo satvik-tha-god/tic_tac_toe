@@ -1,0 +1,26 @@
+Release 9.2i reportgen J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+LAPTOP-AVIS85FA::  Sun Mar 21 01:14:29 2021
+
+D:\4th Semester\CS250\bin\nt\reportgen.exe -intstyle ise -clock_regions -o
+tic_tac_toe tic_tac_toe.ncd 
+
+Loading device for application Rf_Device from file '5vlx110t.nph' in environment
+D:\4th Semester\CS250.
+   "tic_tac_toe" is an NCD, version 3.1, device xc5vlx110t, package ff1136,
+speed -1
+ReportGen:LoadDesign: 'tic_tac_toe.ncd'
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+Device speed data version:  "PRELIMINARY 1.54 2007-04-25".
+
+Generating Clock Region Report: tic_tac_toe.clk_rgn
+
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+reportgen done!

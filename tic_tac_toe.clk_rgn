@@ -1,0 +1,198 @@
+Release 9.2i - reportgen J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Sun Mar 21 01:14:34 2021
+
+SUMMARY
+-------
+There are 16 clock regions:
+
+Clock Reports by Clock Regions
+------------------------------
+
+Clock Region X0Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y0:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y1:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y1:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y2:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBM:     1 used out of    30     3%
+Number of         IOBS:     1 used out of    30     3%
+
+Clock Region X1Y2:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y3:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBM:    20 used out of    30    66%
+Number of         IOBS:    20 used out of    30    66%
+Number of       SLICEL:     7 used out of   700     1%
+Number of       SLICEM:     8 used out of   260     3%
+
+Clock Region X1Y3:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y4:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+Number of         IOBM:    15 used out of    30    50%
+Number of         IOBS:    16 used out of    30    53%
+Number of       SLICEL:     3 used out of   700     1%
+Number of       SLICEM:     3 used out of   260     1%
+
+Clock Region X1Y4:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y5:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y5:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y6:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y6:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X0Y7:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+
+Clock Region X1Y7:
+------------------
+Number of global clocks in this region: 0
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+Summary of components used in this region:
+
+

@@ -1,0 +1,530 @@
+Release 9.2i - reportgen J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Sun Mar 21 01:14:09 2021
+
+File: tic_tac_toe.dly
+
+ The 20 worst nets by delay are:
++-----------------+-----------+
+| Max Delay       | Netname   |
++-----------------+-----------+
+   2.213            X_two
+   1.724            X1_0_IBUF
+   1.689            O_two
+   1.686            X8_2_IBUF
+   1.644            X4_4_IBUF
+   1.545            O_one
+   1.541            F_OBUF
+   1.511            X6_4_IBUF
+   1.505            X7_1_IBUF
+   1.482            O_four
+   1.479            X3_2_IBUF
+   1.460            X4_7_IBUF
+   1.459            X3_5_IBUF
+   1.398            X4_3_IBUF
+   1.394            X7_0_IBUF
+   1.389            O_eight
+   1.376            O_six
+   1.373            X_one
+   1.373            X8_0_IBUF
+   1.367            X3_3_IBUF
+---------------------------------
+
+-------------------------------------------------------------------------------
+                               Net Delays
+-------------------------------------------------------------------------------
+
+F_OBUF
+   F_map47.A
+         1.541  F.O
+
+F_map11
+   F_map11.D
+         1.105  F_map47.A3
+
+F_map18
+   F_map18.D
+         0.511  F_map47.B2
+
+F_map26
+   N10.A
+         1.079  F_map47.B3
+
+F_map43
+   F_map43.B
+         0.224  F_map43.A4
+
+F_map44
+   F_map43.A
+         0.608  F_map45.B4
+
+F_map45
+   F_map45.B
+         0.244  F_map45.A4
+
+F_map46
+   F_map45.A
+         0.568  F_map47.B4
+
+F_map47
+   F_map47.B
+         0.224  F_map47.A4
+
+F_map5
+   N12.A
+         0.272  F_map47.A2
+
+N10
+   N10.B
+         0.254  N10.A6
+         0.448  F_map11.D6
+
+N11
+   N11.B
+         0.244  N11.A6
+         0.835  O_six.A6
+
+N12
+   N12.D
+         0.869  N12.C6
+         0.359  O_seven.A6
+
+N13
+   N13.C
+         0.463  N13.B6
+         0.446  O_eight.A6
+
+N14
+   N14.C
+         0.452  N14.B6
+         0.840  O_nine.D6
+
+N6
+   N6.D
+         0.153  N6.C6
+         0.567  O_one.C6
+
+N7
+   N7.B
+         0.257  N7.A6
+         0.633  O_two.C6
+
+N8
+   N8.B
+         0.388  N12.B6
+         0.255  N8.A6
+
+N9
+   N9.D
+         0.163  O_four.D6
+         0.148  N9.C6
+
+O_eight
+   O_eight.A
+         1.389  F_map45.A1
+         0.839  F_map47.A5
+
+O_four
+   O_four.D
+         1.288  F_map45.B1
+         1.482  N12.A1
+
+O_nine
+   O_nine.D
+         0.729  F_map45.A3
+         0.920  N12.A3
+
+O_one
+   O_one.C
+         1.452  F_map45.B3
+         1.545  N12.A4
+
+O_seven
+   O_seven.A
+         0.312  F_map45.A2
+         0.319  F_map45.B2
+         0.159  N12.A5
+
+O_six
+   O_six.A
+         1.376  F_map45.A5
+         1.347  N12.A2
+
+O_three
+   N12.B
+         0.787  F_map45.A6
+         0.394  F_map45.B5
+         0.255  N12.A6
+
+O_two
+   O_two.C
+         1.689  F_map45.B6
+         1.657  F_map47.A6
+
+X1_0_IBUF
+   X1<0>.I
+         1.724  N6.D3
+
+X1_1_IBUF
+   X1<1>.I
+         0.982  N6.D5
+
+X1_2_IBUF
+   X1<2>.I
+         1.318  N6.D4
+
+X1_3_IBUF
+   X1<3>.I
+         1.211  N6.C2
+         1.174  O_one.C2
+
+X1_4_IBUF
+   X1<4>.I
+         0.732  N6.D6
+
+X1_5_IBUF
+   X1<5>.I
+         1.201  N6.C3
+         0.973  O_one.C3
+
+X1_6_IBUF
+   X1<6>.I
+         1.016  N6.C4
+         0.743  O_one.C4
+
+X1_7_IBUF
+   X1<7>.I
+         0.964  N6.C5
+         0.942  O_one.C5
+
+X2_0_IBUF
+   X2<0>.I
+         1.183  N7.B3
+
+X2_1_IBUF
+   X2<1>.I
+         1.354  N7.B5
+
+X2_2_IBUF
+   X2<2>.I
+         0.989  N7.B4
+
+X2_3_IBUF
+   X2<3>.I
+         1.343  N7.A2
+         0.739  O_two.C2
+
+X2_4_IBUF
+   X2<4>.I
+         1.316  N7.B6
+
+X2_5_IBUF
+   X2<5>.I
+         1.229  N7.A3
+         0.948  O_two.C3
+
+X2_6_IBUF
+   X2<6>.I
+         1.212  N7.A4
+         0.976  O_two.C4
+
+X2_7_IBUF
+   X2<7>.I
+         0.946  N7.A5
+         1.170  O_two.C5
+
+X3_0_IBUF
+   X3<0>.I
+         1.354  N8.B3
+
+X3_1_IBUF
+   X3<1>.I
+         1.128  N8.B5
+
+X3_2_IBUF
+   X3<2>.I
+         1.479  N8.B4
+
+X3_3_IBUF
+   X3<3>.I
+         1.362  N12.B2
+         1.367  N8.A2
+
+X3_4_IBUF
+   X3<4>.I
+         1.195  N8.B6
+
+X3_5_IBUF
+   X3<5>.I
+         1.459  N12.B3
+         1.119  N8.A3
+
+X3_6_IBUF
+   X3<6>.I
+         1.190  N12.B4
+         1.192  N8.A4
+
+X3_7_IBUF
+   X3<7>.I
+         1.129  N12.B5
+         1.326  N8.A5
+
+X4_0_IBUF
+   X4<0>.I
+         1.356  N9.D3
+
+X4_1_IBUF
+   X4<1>.I
+         0.965  N9.D5
+
+X4_2_IBUF
+   X4<2>.I
+         1.350  N9.D4
+
+X4_3_IBUF
+   X4<3>.I
+         1.398  O_four.D2
+         1.350  N9.C2
+
+X4_4_IBUF
+   X4<4>.I
+         1.644  N9.D6
+
+X4_5_IBUF
+   X4<5>.I
+         1.022  O_four.D3
+         0.994  N9.C3
+
+X4_6_IBUF
+   X4<6>.I
+         0.971  O_four.D4
+         0.942  N9.C4
+
+X4_7_IBUF
+   X4<7>.I
+         1.460  O_four.D5
+         1.415  N9.C5
+
+X5_0_IBUF
+   X5<0>.I
+         1.327  N10.B3
+
+X5_1_IBUF
+   X5<1>.I
+         1.155  N10.B5
+
+X5_2_IBUF
+   X5<2>.I
+         1.183  N10.B4
+
+X5_3_IBUF
+   X5<3>.I
+         0.946  N10.A2
+         1.174  F_map11.D2
+
+X5_4_IBUF
+   X5<4>.I
+         1.361  N10.B6
+
+X5_5_IBUF
+   X5<5>.I
+         1.205  N10.A3
+         0.973  F_map11.D3
+
+X5_6_IBUF
+   X5<6>.I
+         1.229  N10.A4
+         0.950  F_map11.D4
+
+X5_7_IBUF
+   X5<7>.I
+         1.329  N10.A5
+         0.720  F_map11.D5
+
+X6_0_IBUF
+   X6<0>.I
+         1.358  N11.B3
+
+X6_1_IBUF
+   X6<1>.I
+         1.129  N11.B5
+
+X6_2_IBUF
+   X6<2>.I
+         1.306  N11.B4
+
+X6_3_IBUF
+   X6<3>.I
+         1.231  N11.A2
+         1.208  O_six.A2
+
+X6_4_IBUF
+   X6<4>.I
+         1.511  N11.B6
+
+X6_5_IBUF
+   X6<5>.I
+         1.223  N11.A3
+         1.179  O_six.A3
+
+X6_6_IBUF
+   X6<6>.I
+         1.326  N11.A4
+         0.975  O_six.A4
+
+X6_7_IBUF
+   X6<7>.I
+         0.946  N11.A5
+         0.925  O_six.A5
+
+X7_0_IBUF
+   X7<0>.I
+         1.394  N12.D3
+
+X7_1_IBUF
+   X7<1>.I
+         1.505  N12.D5
+
+X7_2_IBUF
+   X7<2>.I
+         0.986  N12.D4
+
+X7_3_IBUF
+   X7<3>.I
+         1.010  N12.C2
+         1.208  O_seven.A2
+
+X7_4_IBUF
+   X7<4>.I
+         0.895  N12.D6
+
+X7_5_IBUF
+   X7<5>.I
+         0.739  N12.C3
+         1.289  O_seven.A3
+
+X7_6_IBUF
+   X7<6>.I
+         1.207  N12.C4
+         0.925  O_seven.A4
+
+X7_7_IBUF
+   X7<7>.I
+         0.964  N12.C5
+         1.179  O_seven.A5
+
+X8_0_IBUF
+   X8<0>.I
+         1.373  N13.C3
+
+X8_1_IBUF
+   X8<1>.I
+         1.306  N13.C5
+
+X8_2_IBUF
+   X8<2>.I
+         1.686  N13.C4
+
+X8_3_IBUF
+   X8<3>.I
+         1.017  N13.B2
+         1.002  O_eight.A2
+
+X8_4_IBUF
+   X8<4>.I
+         1.098  N13.C6
+
+X8_5_IBUF
+   X8<5>.I
+         1.215  N13.B3
+         1.179  O_eight.A3
+
+X8_6_IBUF
+   X8<6>.I
+         1.329  N13.B4
+         1.294  O_eight.A4
+
+X8_7_IBUF
+   X8<7>.I
+         0.953  N13.B5
+         0.929  O_eight.A5
+
+X9_0_IBUF
+   X9<0>.I
+         0.973  N14.C3
+
+X9_1_IBUF
+   X9<1>.I
+         1.200  N14.C5
+
+X9_2_IBUF
+   X9<2>.I
+         0.956  N14.C4
+
+X9_3_IBUF
+   X9<3>.I
+         1.221  N14.B2
+         0.950  O_nine.D2
+
+X9_4_IBUF
+   X9<4>.I
+         0.744  N14.C6
+
+X9_5_IBUF
+   X9<5>.I
+         1.011  N14.B3
+         0.998  O_nine.D3
+
+X9_6_IBUF
+   X9<6>.I
+         1.116  N14.B4
+         1.341  O_nine.D4
+
+X9_7_IBUF
+   X9<7>.I
+         1.324  N14.B5
+         0.720  O_nine.D5
+
+X_eight
+   N13.B
+         0.786  F_map43.A1
+         0.723  F_map47.B5
+
+X_four
+   N9.C
+         0.746  F_map18.D1
+         0.928  F_map43.B2
+
+X_nine
+   N14.B
+         0.808  F_map18.D3
+         0.515  F_map43.A3
+
+X_one
+   N6.C
+         1.373  F_map18.D4
+         1.131  F_map43.B4
+
+X_seven
+   N12.C
+         1.048  F_map18.D5
+         0.439  F_map43.A2
+         0.442  F_map43.B3
+
+X_six
+   N11.A
+         0.707  F_map18.D2
+         1.256  F_map43.A5
+
+X_three
+   N8.A
+         0.689  F_map18.D6
+         0.897  F_map43.A6
+         0.894  F_map43.B5
+
+X_two
+   N7.A
+         2.213  F_map43.B6
+         2.111  F_map47.B6
+

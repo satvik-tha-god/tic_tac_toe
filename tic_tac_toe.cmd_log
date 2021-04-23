@@ -1,0 +1,94 @@
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+bitgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -f tic_tac_toe.ut tic_tac_toe.ncd
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -v 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -stamp D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+pin2ucf -o "tic_tac_toe.ucf" -r "tic_tac_toe.lck" "tic_tac_toe.ncd"
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+bitgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -f tic_tac_toe.ut tic_tac_toe.ncd
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+"D:/4th Semester/CS250/bin/nt/xpwr" -intstyle ise "tic_tac_toe.ncd" "tic_tac_toe.pcf" -wx "tic_tac_toe_xpwr.xml" -o "tic_tac_toe.pwr"
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim tic_tac_toe.ngd tic_tac_toe_translate.v
+bitgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -f tic_tac_toe.ut tic_tac_toe.ncd
+pin2ucf -o "constraints.ucf" -r "tic_tac_toe.lck" "tic_tac_toe.ncd"
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim tic_tac_toe.ngd tic_tac_toe_translate.v
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim tic_tac_toe.ngd tic_tac_toe_translate.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim tic_tac_toe.ngd tic_tac_toe_translate.v
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim tic_tac_toe.ngd tic_tac_toe_translate.v
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+bitgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -f tic_tac_toe.ut tic_tac_toe.ncd
+xst -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -ifn tic_tac_toe.xst -ofn tic_tac_toe.syr
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim tic_tac_toe.ngc tic_tac_toe_synthesis.v
+ngdbuild -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -dd _ngo -nt timestamp -uc "constraints.ucf" -p xc5vlx110t-ff1136-1 "tic_tac_toe.ngc" tic_tac_toe.ngd
+map -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -cm area  -k 6 -o tic_tac_toe_map.ncd tic_tac_toe.ngd tic_tac_toe.pcf
+par -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -w -intstyle ise -ol std -t 1 tic_tac_toe_map.ncd tic_tac_toe.ncd tic_tac_toe.pcf
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -s 1 -xml tic_tac_toe tic_tac_toe.ncd -o tic_tac_toe.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim tic_tac_toe.ngd tic_tac_toe_translate.v
+trce -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -e 3 -a -s 1 -xml tic_tac_toe_preroute tic_tac_toe_map.ncd -o tic_tac_toe_preroute.twr tic_tac_toe.pcf -ucf constraints.ucf
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/map -insert_glbl true -w -dir netgen/map -ofmt verilog -sim tic_tac_toe_map.ncd tic_tac_toe_map.v
+netgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -s 1 -pcf tic_tac_toe.pcf -sdf_anno true -sdf_path netgen/par -insert_glbl true -insert_pp_buffers false -w -dir netgen/par -ofmt verilog -sim tic_tac_toe.ncd tic_tac_toe_timesim.v
+bitgen -ise "D:/4th Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise" -intstyle ise -f tic_tac_toe.ut tic_tac_toe.ncd

@@ -1,0 +1,3 @@
+verilog work "tic_tac_toe.v"
+verilog work "tb.v"
+verilog work "D:/4th Semester/CS250/verilog/src/glbl.v"

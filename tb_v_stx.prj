@@ -1,0 +1,3 @@
+verilog isim_temp "tic_tac_toe.v"
+verilog isim_temp "tb.v"
+verilog isim_temp "D:/4th Semester/CS250/verilog/src/glbl.v"

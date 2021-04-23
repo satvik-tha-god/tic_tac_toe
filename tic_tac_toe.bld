@@ -1,0 +1,33 @@
+Release 9.2i ngdbuild J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\4th Semester\CS250\bin\nt\ngdbuild.exe -ise D:/4th
+Semester/CS203 lab/Mini-Project/mini-project/mini-project.ise -intstyle ise -dd
+_ngo -nt timestamp -uc constraints.ucf -p xc5vlx110t-ff1136-1 tic_tac_toe.ngc
+tic_tac_toe.ngd
+
+Reading NGO file "D:/4th Semester/CS203
+lab/Mini-Project/mini-project/tic_tac_toe.ngc" ...
+
+Applying constraints in "constraints.ucf" to the design...
+
+Checking timing specifications ...
+Checking Partitions ...
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 112544 kilobytes
+
+Writing NGD file "tic_tac_toe.ngd" ...
+
+Writing NGDBUILD log file "tic_tac_toe.bld"...

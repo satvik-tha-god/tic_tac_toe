@@ -1,0 +1,43 @@
+ command line:
+   ./tic_tac_toe_tb_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  50021
+
+Mon Mar 22 20:49:02 2021
+
+Total Line Count : 136
+
+ Elaboration time : 0.015625 sec.
+
+ Estimate current memory usage : 158.167 Meg. 
+
+ Total Signals          : 28
+ Total Nets             : 90
+ Total Signal Drivers   : 22
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 25
+ Total Traceable Variables  : 26
+ Total Scalar Nets and Variables : 241
+ntrace select -o on -n /tic_tac_toe_tb_v/F 
+ntrace select -o on -n /tic_tac_toe_tb_v/X1 
+ntrace select -o on -n /tic_tac_toe_tb_v/X2 
+ntrace select -o on -n /tic_tac_toe_tb_v/X3 
+ntrace select -o on -n /tic_tac_toe_tb_v/X4 
+ntrace select -o on -n /tic_tac_toe_tb_v/X5 
+ntrace select -o on -n /tic_tac_toe_tb_v/X6 
+ntrace select -o on -n /tic_tac_toe_tb_v/X7 
+ntrace select -o on -n /tic_tac_toe_tb_v/X8 
+ntrace select -o on -n /tic_tac_toe_tb_v/X9 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0.109375 sec.
+
+ Estimate current memory usage : 166.167 Meg. 
+
+Mon Mar 22 21:08:35 2021
+
